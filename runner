@@ -1,0 +1,25 @@
+#!/usr/bin/env php
+<?php
+/**
+ * @copyright Sharapov A. <alexander@sharapov.biz>
+ * @link      http://www.sharapov.biz/
+ * @license   https://www.gnu.org/licenses/gpl-3.0.en.html GNU General Public License
+ * Date: 28.04.2022
+ * Time: 13:06
+ */
+
+ini_set('display_errors', '1');
+error_reporting(E_ALL);
+date_default_timezone_set('UTC');
+
+require 'vendor/autoload.php';
+
+try {
+    /**
+     * Put your code here
+     */
+    print sprintf("Executed at [%s]\n", date(DATE_RFC3339));
+    print sprintf("Passed env vars [%s]\n", print_r($_ENV, true));
+} catch (\Exception $e) {
+    var_dump($e);
+}
