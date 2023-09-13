@@ -1,16 +1,15 @@
 {
-  "name": "sharapov-outsource/cron-service-php",
+  "name": "sharapov-outsource/docker-php-microservice-cron",
   "description": "Small standalone service to run cron scheduled tasks",
   "minimum-stability": "stable",
   "license": "proprietary",
   "authors": [
     {
-      "name": "Sharapov A.",
+      "name": "Alexander S.",
       "email": "alexander@sharapov.biz"
     }
   ],
   "require": {
-    "php": "^8.2",
-    "ext-json": "*"
+    "php": "^8.2"
   }
 }

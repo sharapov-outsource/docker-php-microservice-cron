@@ -1,5 +1,7 @@
-#!/usr/bin/env php
 <?php
+
+declare(strict_types=1);
+
 /**
  * @copyright Sharapov A. <alexander@sharapov.biz>
  * @link      http://www.sharapov.biz/
@@ -12,14 +14,17 @@ ini_set('display_errors', '1');
 error_reporting(E_ALL);
 date_default_timezone_set('UTC');
 
+if(!file_exists('vendor/autoload.php')) {
+    throw new Exception('Please install the dependencies first');
+}
+
 require 'vendor/autoload.php';
 
 try {
     /**
-     * Put your code here
+     * Put your code here ....
      */
-    print sprintf("Executed at [%s]\n", date(DATE_RFC3339));
-    print sprintf("Passed env vars [%s]\n", print_r($_ENV, true));
+    print sprintf("[%s] cron iteration %s \n", date(DATE_RFC3339), $_ENV['ENV_TEST']);
 } catch (\Exception $e) {
     var_dump($e);
 }

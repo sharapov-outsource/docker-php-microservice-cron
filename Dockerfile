@@ -1,6 +1,6 @@
 FROM php:8.2-alpine AS app_composer
 
-LABEL maintainer="Sharapov A. <alexander@sharapov.biz>"
+LABEL maintainer="Alexader S. <alexander@sharapov.biz>"
 
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
@@ -10,9 +10,9 @@ COPY composer.json /srv
 
 WORKDIR /srv
 
-RUN composer update --no-interaction --no-scripts --no-dev
+RUN composer install --no-interaction --no-scripts --no-dev
 
-FROM php:8.2-alpine AS app_crontab
+FROM php:8.2-alpine AS app_service_cron
 
 LABEL maintainer="Alexander S. <alexander@sharapov.biz>"
 

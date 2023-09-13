@@ -1,2 +1,5 @@
 /vendor
 .gitignore
+.env
+env_example
+README.md
