@@ -1,6 +1,6 @@
 FROM php:8.2-alpine AS app_composer
 
-LABEL maintainer="Alexader S. <alexander@sharapov.biz>"
+LABEL maintainer="Alexander S. <alexander@sharapov.biz>"
 
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
