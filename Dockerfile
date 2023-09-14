@@ -23,6 +23,9 @@ RUN apk update && apk add tzdata
 COPY --from=app_composer /srv/vendor /srv/vendor
 COPY runner /srv
 
-COPY ./start.sh /start.sh
-RUN chmod +x /start.sh
-CMD ["/start.sh"]
+COPY ./start.sh /srv/start.sh
+RUN chmod +x /srv/start.sh
+
+WORKDIR /srv
+
+CMD ["./start.sh"]

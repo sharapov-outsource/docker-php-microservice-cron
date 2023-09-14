@@ -14,10 +14,6 @@ ini_set('display_errors', '1');
 error_reporting(E_ALL);
 date_default_timezone_set('UTC');
 
-if(!file_exists('vendor/autoload.php')) {
-    throw new Exception('Please install the dependencies first');
-}
-
 require 'vendor/autoload.php';
 
 try {
